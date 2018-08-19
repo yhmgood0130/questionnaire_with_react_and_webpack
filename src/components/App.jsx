@@ -5,7 +5,7 @@ import './app.scss';
 
 class App extends Component {
     render() {
-        return <p>Hello darkness smile old friend...</p>;
+        return <p>Hellao darkness smile old friend...</p>;
     }
 }
 
