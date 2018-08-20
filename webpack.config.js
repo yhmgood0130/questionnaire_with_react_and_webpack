@@ -15,15 +15,23 @@ var config = {
         vendor: VENDOR_LIBS
     },
     output: {
-        path: BUILD_DIR,
-        filename: '[name].[chunkhash].js'
+        // path: BUILD_DIR,
+        // filename: '[name].[hash].js'
+        path: path.resolve(__dirname, 'dist'),
+        filename: '[name].[hash].js',
+        publicPath: '/'
     },
     module: {
         rules: [
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                use: 'babel-loader'
+                loader: 'babel-loader',
+                options: {
+                    babelrc: false,
+                    presets: ["babel-preset-env", "react", "stage-2"],
+                    plugins: ['syntax-dynamic-import']
+                }
             },
             {
                 test: /\.css$/,
@@ -39,13 +47,22 @@ var config = {
             }
         ]
     },
+    devServer: {
+        contentBase: [BUILD_DIR, path.join(__dirname, "assets")],
+        compress: true,
+        port: 9000,
+        disableHostCheck: false,
+        open: true,
+        hot: true
+    },
     plugins: [
         new htmlWebpackPlugin({
             template: 'index.html'
         }),
         new webpack.optimize.CommonsChunkPlugin({
             names: ['vendor', 'manifest']
-        })
+        }),
+        new webpack.HotModuleReplacementPlugin()
     ]
 }
 
