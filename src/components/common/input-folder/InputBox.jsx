@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './input-box.scss';
+import './styles/input-box.scss';
 
 const propTypes = {
 	title: PropTypes.string.isRequired,

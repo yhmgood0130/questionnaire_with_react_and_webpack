@@ -1,5 +1,5 @@
 import React from 'react';
-import './answer-list.scss';
+import './styles/answer-list.scss';
 
 const AnswerList = () => (
     <div className="container-questions">

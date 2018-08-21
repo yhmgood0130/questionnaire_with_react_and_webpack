@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import InputBox from '../common/input-folder/InputBox.jsx';
-import DropdownMenu from '../common/input-folder/DropdownMenu.jsx';
+import InputBox from 'common/input-folder/InputBox';
+import DropdownMenu from 'common/input-folder/DropdownMenu';
 import { withRouter } from 'react-router-dom';
-import './question-list.scss';
+import './styles/question-list.scss';
 import * as QuestionAPI from '../../api/QuestionsAPI';
 
 class QuestionList extends Component {

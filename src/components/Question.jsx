@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import QuestionList from './question-list/QuestionList.jsx';
-import './question.scss';
+import QuestionList from './question-list/QuestionList';
+import './styles/question.scss';
 
 const Question = () => (
 		<div className="container-questions">

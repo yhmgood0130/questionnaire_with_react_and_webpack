@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import Loadable from 'react-loadable';
-import Question from './Question.jsx';
+import Question from './Question';
 
-import Loading from './Loading.jsx';
+import Loading from './Loading';
 
-import './app.scss';
+import './styles/app.scss';
 
 
 class App extends Component {
     render() {
 		const loadableQuestionList = Loadable({
-				loader: () => import('./question-list/QuestionList.jsx'),
+				loader: () => import('./question-list/QuestionList'),
 				loading: Loading,
 		})
 
 		const loadableAnswerList = Loadable({
-				loader: () => import('./answer-list/AnswerList.jsx'),
+				loader: () => import('./answer-list/AnswerList'),
 				loading: Loading,
 		})
         return (

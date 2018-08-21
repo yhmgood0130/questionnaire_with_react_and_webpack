@@ -5,6 +5,10 @@ var htmlWebpackPlugin = require('html-webpack-plugin');
 var BUILD_DIR = path.join(__dirname, 'dist');
 var APP_DIR = path.join(__dirname, 'src');
 
+function resolve(dir) {
+	return path.join(__dirname, '..', dir);
+}
+
 const VENDOR_LIBS = [
     'react', 'react-dom', 'react-router-dom'
 ];
@@ -19,6 +23,13 @@ var config = {
         filename: '[name].[hash].js',
         publicPath: '/'
     },
+		resolve: {
+			extensions: ['.js', '.jsx'],
+			alias: {
+				'@': path.resolve(__dirname,'src'),
+				common: path.resolve(__dirname,'src/components/common')
+			}
+		},
     module: {
         rules: [
             {
