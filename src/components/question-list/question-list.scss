@@ -1,0 +1,17 @@
+$brown: #795548;
+$white: #fff;
+
+form {
+	display:table;
+	clear:both;
+	padding:1em 1.5em;
+
+	button {
+		border:none;
+		padding:8px 16px;
+		text-align:center;
+		cursor:pointer;
+		color:$white;
+		background-color:$brown;
+	}
+}

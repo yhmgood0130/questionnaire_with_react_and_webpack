@@ -15,8 +15,6 @@ var config = {
         vendor: VENDOR_LIBS
     },
     output: {
-        // path: BUILD_DIR,
-        // filename: '[name].[hash].js'
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[hash].js',
         publicPath: '/'
@@ -55,6 +53,7 @@ var config = {
         open: true,
         hot: true
     },
+		devtool: '#cheap-module-source-map',
     plugins: [
         new htmlWebpackPlugin({
             template: 'index.html'

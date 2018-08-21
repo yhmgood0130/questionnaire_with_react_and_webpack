@@ -1,0 +1,17 @@
+$brown: #795548;
+div {
+	.container-questions {
+		box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+	}
+	.container-header {
+		color:#fff;
+		background-color:$brown;
+		padding: 0.8em;
+
+
+		span {
+			font-family: Helvetica;
+			font-size: 2em;
+		}
+	}
+}
