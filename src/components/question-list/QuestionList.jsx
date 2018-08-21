@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import InputBox from '../common/input-folder/InputBox.jsx';
 import DropdownMenu from '../common/input-folder/DropdownMenu.jsx';
+import { withRouter } from 'react-router-dom';
 import './question-list.scss';
 import * as QuestionAPI from '../../api/QuestionsAPI';
 
@@ -35,9 +36,9 @@ class QuestionList extends Component {
 
 		}
     handleSubmit = (event) => {
-			console.log(this.state.answers);
+			console.log(this.props);
 			event.preventDefault();
-			this.props.push(`/${answers}`);
+			this.props.history.push('/answers');
     }
 		handleInput(e,type) {
 			let input = e.target.value;
@@ -118,4 +119,4 @@ class QuestionList extends Component {
     }
 }
 
-export default QuestionList;
+export default withRouter(QuestionList);

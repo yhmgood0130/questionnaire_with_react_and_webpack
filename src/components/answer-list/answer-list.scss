@@ -1,0 +1,25 @@
+$brown: #795548;
+$lightbeige: #fdf5e6;
+$white: #fff;
+
+div {
+	position: relative;
+
+
+	.container-answers {
+		padding:1em 1.5em;
+		h1,h2 {
+			color:$brown;
+		}
+
+		p {
+			padding:8px;
+			display:block;
+			width:100%;
+			color:#000;
+		}
+	}
+	input:focus {
+		background-color : $lightbeige;
+	}
+}
