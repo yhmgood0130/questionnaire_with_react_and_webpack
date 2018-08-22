@@ -17,7 +17,7 @@ var config = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[hash].js',
-        publicPath: './'
+        publicPath: ''
     },
 		resolve: {
 			extensions: ['.js', '.jsx'],
@@ -57,11 +57,11 @@ var config = {
         compress: true,
         port: 9000,
         disableHostCheck: false,
-				historyApiFallback: true,
+        historyApiFallback: true,
         open: true,
         hot: true
     },
-		devtool: '#cheap-module-source-map',
+    devtool: '#cheap-module-source-map',
     plugins: [
         new htmlWebpackPlugin({
             template: 'index.html'

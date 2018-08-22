@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import Loadable from 'react-loadable';
-import Question from './Question';
+import Question from './question/Question';
 
 import Loading from './Loading';
 
@@ -11,7 +11,7 @@ import './styles/app.scss';
 class App extends Component {
     render() {
 		const loadableQuestionList = Loadable({
-				loader: () => import('./question-list/QuestionList'),
+				loader: () => import('./question/question-list/QuestionList'),
 				loading: Loading,
 		})
 
@@ -21,10 +21,6 @@ class App extends Component {
 		})
         return (
             <div className="app">
-                <Route
-                    path='/questions'
-                    component={loadableQuestionList}
-                    />
                 <Route
                     path='/answers'
                     component={loadableAnswerList}

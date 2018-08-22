@@ -1,6 +1,7 @@
 $brown: #795548;
 $lightbeige: #fdf5e6;
 $white: #fff;
+$black: #000;
 
 div {
 	position: relative;
@@ -8,15 +9,27 @@ div {
 
 	.container-answers {
 		padding:1em 1.5em;
-		h1,h2 {
+		h1,h2,h4 {
 			color:$brown;
 		}
 
 		p {
-			padding:8px;
-			display:block;
-			width:100%;
-			color:#000;
+			padding-left:0.6em;
+			color:$black;
+			font-size: 14px;
+			font-weight: 600;
+		}
+
+		h4 {
+			opacity: 0.9;
+			padding-left: 0.4em;
+
+			+ p {
+				padding-left:1.5em;
+				color:$black;
+				font-size: 14px;
+				font-weight: 600;
+			}
 		}
 	}
 	input:focus {
