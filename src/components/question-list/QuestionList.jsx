@@ -36,9 +36,8 @@ class QuestionList extends Component {
 
 		}
     handleSubmit = (event) => {
-			console.log(this.props);
 			event.preventDefault();
-			this.props.history.push('/answers');
+			this.props.history.push({pathname:'/answers', state: this.state.answers});
     }
 		handleInput(e,type) {
 			let input = e.target.value;

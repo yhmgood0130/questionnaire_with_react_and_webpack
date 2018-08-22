@@ -5,10 +5,6 @@ var htmlWebpackPlugin = require('html-webpack-plugin');
 var BUILD_DIR = path.join(__dirname, 'dist');
 var APP_DIR = path.join(__dirname, 'src');
 
-function resolve(dir) {
-	return path.join(__dirname, '..', dir);
-}
-
 const VENDOR_LIBS = [
     'react', 'react-dom', 'react-router-dom'
 ];
@@ -21,7 +17,7 @@ var config = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[hash].js',
-        publicPath: '/'
+        publicPath: './'
     },
 		resolve: {
 			extensions: ['.js', '.jsx'],
@@ -61,6 +57,7 @@ var config = {
         compress: true,
         port: 9000,
         disableHostCheck: false,
+				historyApiFallback: true,
         open: true,
         hot: true
     },
