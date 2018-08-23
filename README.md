@@ -2,7 +2,7 @@
 
 ## About
 
-Questionnaire is a simple app built with Webpack and React
+Questionnaire is a simple app built with Webpack and React and the user can fill out the questions and see the result after submitting the questions
 
 ## How to use
 
