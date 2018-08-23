@@ -5,11 +5,12 @@
 Questionnaire is a simple app built with Webpack and React
 
 ## How to use
-### For Dev
 
-Yarn
+### Install
 
-and 
+Type Yarn
+
+### Dev
 
 Yarn run dev
 
